@@ -7,7 +7,7 @@ var session = require('express-session');
 var mongoStore = require('connect-mongo')(session);
 var app = express();
 
-mongoose.connect('mongodb://localhost/bloom');
+mongoose.connect('mongodb://maden.kr/bloom');
 
 var db = mongoose.connection;
 
