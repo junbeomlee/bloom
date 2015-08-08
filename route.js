@@ -1,14 +1,11 @@
-var userController = require('./controller/user.js');
+var userController = require('./controller/userController.js');
 
 exports.route = function(app) {
 
-	app.get('/insert',userContoller.insert);
+	app.get('/insert',userController.insert);
 	app.get('/',function(req,res){
-		res.send("/   request");
+		res.send("test session");
+		console.log(req.cookies);
+		console.log(req.session);
 	})
-	app.get('/userRemove',userController.remove);
-	app.get('/send',function (req,res) {
-		console.log("send");
-	});
-	app.get('/userSignUp', userController.signUp);
 };
