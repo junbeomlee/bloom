@@ -5,11 +5,17 @@ exports.route = function(app) {
     if(req.session.email){
       return next();
     }
-    res.send("needlogin");
+    var json={
+      data:"needlogin"
+    }
+    res.send(json);
   })
 
   app.get('/login/something',function (req,res) {
-    res.send("login/something auth");
+    var json={
+      data:"login/something auth"
+    }
+    res.send(json);
   })
 
   app.get('/login/soemething2',function (req,res) {

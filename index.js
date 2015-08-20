@@ -33,7 +33,6 @@ app.use(session({
 
 //not need login
 require('./route/route.js').route(app);
-
 //need login
 require('./route/login.js').route(app);
 
